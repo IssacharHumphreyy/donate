@@ -12,6 +12,8 @@
     
      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+     <script src="https://www.paypalobjects.com/js/external/apdg.js" type="text/javascript"></script>
+    
 </head>
 
 <body>
@@ -54,16 +56,18 @@
      
      </div>
      
-     <form action="https://www.sandbox.paypal.com/webapps/adaptivepayment/flow/pay" target="PPDGFrame" class="standard">
-<label for="buy">Donate Now:</label>
-<input type="image" id="submitBtn" value="Pay with PayPal" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif">
-<input id="type" type="hidden" name="expType" value="light">
-<input id="paykey" type="hidden" name="paykey" value="insert_pay_key">
+ <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="kusanyacafe@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="item_name" value="Kusanya Cafe">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="bn" value="PP-DonationsBF:34691_152221251479795_100000757623357_238856_4132843_n-full;size$350,133.ImageHandler:NonHostedGuest">
+<input type="image" src="http://www.englewoodportal.org/uploads/englewoodportal/images/34691_152221251479795_100000757623357_238856_4132843_n.jpg/34691_152221251479795_100000757623357_238856_4132843_n-full;size$350,133.ImageHandler" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-<script type="text/javascript" charset="utf-8">
-var embeddedPPFlow = new PAYPAL.apps.DGFlow({trigger: 'submitBtn'});
-</script>
      
      <Footer>
      
